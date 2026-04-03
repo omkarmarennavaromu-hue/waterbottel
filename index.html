@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURA | The Fluid Monolith</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#8f6f70",
+                    "on-primary-fixed": "#40000a",
+                    "on-secondary-fixed-variant": "#80272f",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-tint": "#bb1435",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#e3bebe",
+                    "surface-container": "#f0edec",
+                    "tertiary-container": "#008656",
+                    "secondary-fixed-dim": "#ffb3b4",
+                    "on-primary-container": "#fffbff",
+                    "background": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "secondary": "#9f3e45",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed": "#002112",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-container": "#761f29",
+                    "on-secondary-fixed": "#40000a",
+                    "secondary-fixed": "#ffdada",
+                    "tertiary-fixed": "#7bfab9",
+                    "surface": "#fcf9f8",
+                    "tertiary": "#006a43",
+                    "primary-fixed": "#ffdada",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#da3049",
+                    "inverse-primary": "#ffb3b4",
+                    "tertiary-fixed-dim": "#5ddd9f",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#b70f33",
+                    "secondary-container": "#ff888d",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-highest": "#e5e2e1",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#5b4040",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary-fixed-variant": "#920024",
+                    "primary-fixed-dim": "#ffb3b4",
+                    "on-tertiary-container": "#f6fff6",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#005233"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ease-out-quint {
+            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+        h1, h2, h3 {
+            font-family: 'Epilogue', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(28,27,27,0.06)] ease-out-quint transition-all">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-stone-900 font-['Epilogue']">AURA</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-red-700 font-bold border-b-2 border-red-700 font-['Epilogue'] tracking-tight transition-opacity duration-300" href="#">Home</a>
+<a class="text-stone-600 hover:text-stone-900 font-['Epilogue'] tracking-tight transition-opacity duration-300" href="#">Product</a>
+<a class="text-stone-600 hover:text-stone-900 font-['Epilogue'] tracking-tight transition-opacity duration-300" href="#">Pricing</a>
+<a class="text-stone-600 hover:text-stone-900 font-['Epilogue'] tracking-tight transition-opacity duration-300" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-bold hover:opacity-80 transition-all duration-300 ease-out-quint">
+                Buy Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden px-8">
+<!-- Tonal Background Element -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-radial-gradient from-surface-container-low to-transparent opacity-50 blur-3xl"></div>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<!-- Content Left -->
+<div class="lg:col-span-5 space-y-8">
+<div class="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-[0.75rem] font-bold uppercase tracking-[0.1em]">
+                    Premium Hydration
+                </div>
+<h1 class="text-6xl md:text-8xl font-black text-on-surface leading-[0.95] tracking-tighter">
+                    Drinking Water Bottle
+                </h1>
+<p class="text-lg text-on-surface-variant max-w-md leading-relaxed opacity-80">
+                    A masterclass in functional minimalism. Engineered with surgical-grade titanium and vacuum-sealed for 48-hour thermal precision.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold shadow-lg hover:shadow-primary/20 transition-all duration-300 ease-out-quint">
+                        Start Now
+                    </button>
+<button class="group px-10 py-4 rounded-full font-bold text-primary border border-outline-variant/15 hover:border-primary transition-all duration-300 ease-out-quint flex items-center gap-2">
+                        Discover More
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Image Center-Right -->
+<div class="lg:col-span-7 flex justify-center items-center relative">
+<!-- Decorative Circle -->
+<div class="absolute w-[120%] aspect-square bg-surface-container-low rounded-full -z-10 opacity-40"></div>
+<div class="relative w-full max-w-xl aspect-[3/4] flex items-center justify-center">
+<img alt="Premium Water Bottle" class="w-full h-full object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.12)]" data-alt="Close-up of a sleek minimalist premium matte water bottle standing on a reflective stone surface with soft dramatic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQWu6PKpePQaZa-766Qb38JvDpP0Rpon4onyFnece9hhqCjidl-TBWCIK9AUQfHRZRIw2Mh_AdpRC7DSUjBJuxp648iEcSFqS010s3Vy838_u6lpq3ksNSbNDQ-vWFB0MeWV2CeVZXQ7kFNujcBiG8IEJyVfSM1aDQiYE2kRR31Qg9Vw58nXii3pPHWIG5mwD8etvA22X1QTJ-7I_-BUbDHKRp7Z1OW6rm4pqsWpZ_55S4BMaBtZkr2RQbMdD5gd2SN44x_KH7dBg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Section: Bento Grid -->
+<section class="py-32 px-8 bg-surface-container-low/30">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 bg-surface-container-lowest p-12 rounded-[2.5rem] flex flex-col justify-between group overflow-hidden relative">
+<div class="relative z-10">
+<label class="text-[0.75rem] font-bold uppercase tracking-[0.1em] text-primary mb-4 block">Purity Redefined</label>
+<h2 class="text-4xl font-bold tracking-tight text-on-surface max-w-md">Ultra-Filtered. Sustainably Sourced.</h2>
+</div>
+<div class="mt-12 relative z-10">
+<p class="text-on-surface-variant max-w-sm">Our proprietary filtration system ensures every drop is as pristine as a mountain spring.</p>
+</div>
+<img alt="Water Detail" class="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity duration-700" data-alt="Microscopic view of pure water droplets on a transparent glass surface with soft blue and white ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbaf-77cbzIxs1PWG9MZ7HH9ehtRqqw7NcQaIY4JjNUk--1qg5Iuu0_gSLkoUUyBnaGzlrSqYH0mA8YC8fnM5-yeROez3cd7QcxQRv3rVNXJpy1Sh_EftViZ-i88iwC999syQjWrzQoSSS05FnROD4V5MfiYPCrkVxWgd7f40f41dkEf834LDcNCDCthtlKHDD5l2jXmC3C3ni0AYM9laiQdPiVFdlHBikJqIEJmgnKhiViXnWEawrpETAJXrstmw01rcDPRJAK8c"/>
+</div>
+<!-- Small Vertical Card -->
+<div class="md:col-span-4 bg-primary p-12 rounded-[2.5rem] text-on-primary flex flex-col justify-end min-h-[400px]">
+<span class="material-symbols-outlined text-4xl mb-6" data-weight="fill">eco</span>
+<h3 class="text-2xl font-bold mb-4">Eco-Conscious Architecture</h3>
+<p class="opacity-80 text-sm leading-relaxed">Built to last a lifetime, reducing plastic waste by up to 150 bottles per year.</p>
+</div>
+<!-- Three Bottom Cards -->
+<div class="md:col-span-4 bg-surface-container-lowest p-10 rounded-[2.5rem]">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">thermometer</span>
+</div>
+<h4 class="font-bold text-xl mb-2 text-on-surface">Thermal Lock</h4>
+<p class="text-sm text-on-surface-variant">Cold for 48h. Hot for 24h. No compromise.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest p-10 rounded-[2.5rem]">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">shield</span>
+</div>
+<h4 class="font-bold text-xl mb-2 text-on-surface">Surgical Grade</h4>
+<p class="text-sm text-on-surface-variant">18/8 Stainless Steel construction for maximum durability.</p>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest p-10 rounded-[2.5rem]">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">colors</span>
+</div>
+<h4 class="font-bold text-xl mb-2 text-on-surface">Matte Essence</h4>
+<p class="text-sm text-on-surface-variant">Available in 8 curated architectural finishes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing / Conversion Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<img alt="Lifestyle" class="rounded-[2rem] shadow-2xl" data-alt="An elegant hand holding a black matte water bottle against a minimalist modern concrete architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXWKOLCpa_Roylg_mg4uimvnEjrqmEmlHt4glQD8-8QcSLRZaQ6T7bfsISpAiLMXdJ6ywUq3d_khCJoPw9NSgpWWBN3jn9qJvSt1xnJwaaxLUdC6w3L_TA48Jw7CKrP3mhcFxbFynRjW3hZjtvfA3xm4bFHzHDbglUtYzAwnRLuieqSQQ5dJoySV4Ly8--X63ilVeT53Ui7bMqWoVq6obnLwnVp5y8WmxjUEh1UgsJb36I0Wb_AA9Lul1LSi_N04QMY1TXpA1zhA4"/>
+</div>
+<div class="lg:w-1/2 space-y-8">
+<label class="text-[0.75rem] font-bold uppercase tracking-[0.1em] text-primary">Availability</label>
+<h2 class="text-5xl font-extrabold tracking-tighter">Own the Vessel of the Future.</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-4 border-b border-outline-variant/15">
+<span class="font-bold">Aura Standard (500ml)</span>
+<span class="text-primary font-black">$49.00</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-outline-variant/15">
+<span class="font-bold">Aura Pro (750ml)</span>
+<span class="text-primary font-black">$65.00</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-outline-variant/15">
+<span class="font-bold">Aura Elite (1L)</span>
+<span class="text-primary font-black">$85.00</span>
+</div>
+</div>
+<p class="text-on-surface-variant opacity-70">Free global shipping on orders over $100. Carbon-neutral delivery guaranteed.</p>
+<button class="w-full bg-on-surface text-surface py-5 rounded-full font-bold text-lg hover:bg-primary transition-all duration-500 ease-out-quint">
+                    Reserve Yours Now
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 bg-stone-100 dark:bg-stone-950 font-['Manrope'] text-sm tracking-wide uppercase">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+<div class="text-lg font-bold text-stone-900 dark:text-stone-100 font-['Epilogue'] tracking-tighter">AURA</div>
+<div class="flex space-x-12">
+<a class="text-stone-500 dark:text-stone-400 hover:text-red-700 transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-red-700 transition-colors" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-red-700 transition-colors" href="#">Sustainability</a>
+</div>
+<div class="text-stone-500 dark:text-stone-400">
+                © 2026 Designed by omkar m
+            </div>
+</div>
+</footer>
+</body></html>
